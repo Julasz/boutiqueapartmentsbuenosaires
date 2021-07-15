@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+  position: relative; }
+
+main, footer {
+  background-color: #fdf9f2; }
+
+.fotoPrincipal, .fotoMapa {
+  width: 100%; }
+
+.contenedor, .contenedor-secundario, .contenedor-terciario {
+  width: 120rem;
+  margin: 0 auto; }
+
+.contenedor-secundario, .contenedor-terciario {
+  width: 100%;
+  padding: 0 10rem; }
+
+.contenedor-terciario {
+  padding: 0 16rem; }
+
+hr {
+  margin: 0; }
+
+h1 {
+  color: #ca9e64;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 8rem;
+  padding: 5rem; }
+
+.descripcion {
+  font-style: italic; }
+
+p, .lista-servicios {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2;
+  margin: 0;
+  padding: 3rem 6rem;
+  letter-spacing: 2px; }
+
+h1, p, .footer {
+  text-align: center; }
+
+.navPrincipal {
+  width: 100%;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  position: sticky;
+  z-index: 9999;
+  top: 0px;
+  background-color: white;
+  opacity: .87; }
+  .navPrincipal ul {
+    display: flex;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center; }
+  .navPrincipal a:hover {
+    font-size: 2.7rem; }
+
+li {
+  list-style: none;
+  justify-content: space-between;
+  height: 20%; }
+  li a {
+    text-decoration: none;
+    cursor: pointer; }
+  li a:active, li a:hover {
+    font-weight: bold; }
+  li a:link, li a:visited, li .sanTelmo__pagina, li .sanTelmo__pagina:active {
+    color: #ca9e64; }
+
+.sanTelmo .sanTelmo__titulo {
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+  animation-delay: 0s; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.sanTelmo .sanTelmo__pagina {
+  color: #ca9e64;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2rem; }
+
+.carousel .carousel-item {
+  max-width: 100%;
+  height: auto; }
+
+.cardContenedor {
+  padding: 16px;
+  display: flex;
+  justify-content: space-evenly; }
+
+.card {
+  flex-direction: row;
+  background-color: #fdf9f2; }
+  .card .card__habitaciones {
+    flex-grow: 1;
+    border-radius: 5px;
+    margin: 16px;
+    background-color: white;
+    width: 20%; }
+  .card .card__habitaciones .card__imagen {
+    padding: 3rem 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
+  .card .card__habitaciones {
+    padding: 16px 8px;
+    text-align: center; }
+  .card .card__habitaciones .card__titulo {
+    padding-bottom: 8px; }
+  .card .card__texto {
+    letter-spacing: normal;
+    padding: 1rem 2rem; }
+
+#grilla1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  gap: 4rem;
+  padding-bottom: 5rem;
+  width: 100%; }
+  #grilla1 .servicios {
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px; }
+  #grilla1 .serviciosIcono {
+    display: grid;
+    justify-content: center;
+    width: 100%; }
+  #grilla1 .serviciosTexto {
+    width: 100%; }
+  #grilla1 .servicios-nombre {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    text-align: center; }
+  #grilla1 .servicioContenedor {
+    padding: 0 10rem 0 10rem; }
+
+@media only screen and (max-width: 600px) {
+  .navPrincipal {
+    position: static; }
+  h1, .sanTelmo__titulo {
+    font-size: 5.4rem; }
+  .alvear {
+    font-size: 5.5rem; }
+  p {
+    font-size: 2rem; }
+  ul, .iconos, .dropdown-menu {
+    font-size: 2rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: .5rem; }
+  .contenedor-secundario, .contenedor-terciario {
+    padding: 1rem;
+    text-align: justify; }
+  .contenedor-terciario {
+    padding: 1rem; }
+  .btn {
+    font-size: 2rem; }
+  footer .footer__icono {
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0; }
+  footer .footer__texto {
+    padding: 1rem 0 0 1rem; }
+  #grilla1 {
+    display: block;
+    padding: 3rem 8rem;
+    margin: 0; }
+    #grilla1 .servicios {
+      margin-bottom: 3rem; }
+  .card {
+    padding: 0 0 0 2rem;
+    display: block;
+    justify-content: center; }
+    .card .card__habitaciones {
+      width: 90%; }
+    .card .card__contenido {
+      width: 100%; }
+    .card .input-text {
+      font-weight: bolder; }
+  .formulario {
+    width: 90%; }
+    .formulario .boton {
+      width: 100%;
+      font-weight: bold; } }
+
+@media only screen and (min-width: 601px) {
+  .navPrincipal {
+    position: static; }
+  .contenedor-secundario, .contenedor-terciario {
+    padding: 0 4rem; }
+  .contenedor-terciario {
+    padding: 0 1rem; }
+  h1, .sanTelmo__titulo {
+    font-size: 6rem; }
+  .alvear {
+    font-size: 5rem; }
+  p {
+    font-size: 2rem; }
+  .navPrincipal a:hover, .btn:hover {
+    font-size: 2.1rem; }
+  ul, .btn {
+    font-size: 1.4rem;
+    font-weight: bold; }
+  #grilla1 {
+    display: block;
+    padding: 3rem 8rem; }
+    #grilla1 .servicios {
+      margin-bottom: 3rem; }
+  .card {
+    display: block;
+    justify-content: center; }
+    .card .card__habitaciones {
+      width: 90%;
+      margin: 3rem; }
+    .card .card__contenido {
+      width: 100%; }
+  .formulario .boton {
+    font-weight: bold;
+    width: 100%; }
+  footer .footer__icono, footer .footer__nav {
+    flex-direction: row;
+    justify-content: center; }
+  footer .footer__texto {
+    text-align: center; } }
+
+@media only screen and (min-width: 768px) {
+  .contenedor-secundario, .contenedor-terciario {
+    padding: 0 3rem; }
+  .contenedor-terciario {
+    width: 100%; }
+  h1, .sanTelmo__titulo, .alvear {
+    font-size: 8rem; }
+  ul, .btn {
+    font-size: 2rem; }
+  .navPrincipal a:hover, .btn:hover {
+    font-size: 2.5rem; }
+  .dropdown-menu a:hover {
+    font-size: 2.1rem; }
+  #grilla1 {
+    display: flex;
+    padding: 2rem 0; }
+    #grilla1 .servicios {
+      padding: 2rem 0;
+      width: 50%; }
+  .card {
+    width: 70%;
+    margin: auto;
+    padding: 2rem auto; }
+  .formulario {
+    width: 90%; }
+    .formulario .boton {
+      width: 100%;
+      font-weight: bold; } }
+
+@media only screen and (min-width: 992px) {
+  .navPrincipal {
+    position: sticky; }
+  .contenedor-secundario, .contenedor-terciario {
+    padding: 0 10rem;
+    margin: 0;
+    width: 100%; }
+  #grilla1 {
+    display: grid;
+    padding-bottom: 5rem; }
+    #grilla1 .servicios {
+      display: grid;
+      padding: 1rem;
+      margin: 0;
+      width: 100%; }
+  .card {
+    display: flex;
+    width: 100%;
+    margin: 0; }
+    .card .card__habitaciones {
+      margin: 5rem 2rem; }
+    .card .card__contenido {
+      margin: 0; }
+  .cardContenedor {
+    display: flex; }
+  .formulario {
+    width: 65rem; }
+    .formulario .boton {
+      width: 15%;
+      font-weight: bold; } }
+
+h2 {
+  color: #8B4513;
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+  font-weight: bold; }
+
+.sombra {
+  -webkit-box-shadow: 1px 0px 19px -2px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 1px 0px 19px -2px rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 0px 19px -2px rgba(0, 0, 0, 0.9); }
+
+.sombra-secundaria {
+  -webkit-box-shadow: -1px 0px 12px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 12px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 12px -1px rgba(0, 0, 0, 0.75); }
+
+.formulario {
+  margin: 0 auto;
+  padding: 10rem 0; }
+  .formulario fieldset {
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    border: none;
+    border-radius: 1rem; }
+  .formulario legend {
+    text-align: center;
+    color: #ca9e64;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 4rem;
+    margin-bottom: 2rem; }
+  .formulario .boton {
+    display: inline;
+    padding: 1rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    color: #8B4513;
+    background-color: #faf3e7;
+    margin: 0 1rem 3rem 0;
+    border: none;
+    cursor: pointer; }
+
+.contenidoCampos {
+  align-items: center;
+  padding: 3rem; }
+  .contenidoCampos label {
+    color: #8B4513;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    padding-right: 2rem;
+    display: block; }
+
+.fechas, .label-none {
+  display: inline;
+  justify-content: space-evenly;
+  padding: 1rem; }
+
+.campo {
+  margin-bottom: 1.5rem; }
+  .campo .input-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    display: inline;
+    width: 100%;
+    height: 100%; }
+  .campo .input-text:focus {
+    border-color: #ca9e64;
+    font-size: 2.2rem; }
+
+.campo-fechas {
+  display: flex; }
+  .campo-fechas label {
+    color: #8B4513;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    display: block; }
+    .campo-fechas label #label-none {
+      display: inline; }
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  padding: 1rem 1.8rem;
+  height: 20%; }
+  .footer__nav a:hover {
+    font-size: 2rem; }
+  .footer__nav li {
+    font-size: 1.8rem;
+    list-style-type: unset;
+    padding: 1rem 1rem 0 1rem;
+    letter-spacing: 1.5px; }
+
+.footer__texto {
+  color: #6d6c6c;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding-bottom: 2rem; }
+
+.footer__icono {
+  display: flex;
+  padding: 0 2rem; }
