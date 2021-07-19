@@ -603,6 +603,10 @@ h2{
 } 
 
 // FOOTER
+.footer__nav, .footer__icono{
+    justify-content: left;
+
+}
 .footer__nav{
     list-style:none;
     display: flex;
@@ -631,6 +635,10 @@ h2{
 
 .footer__icono{
     display: flex;
-    padding: 0 2rem;
+    padding: 1rem 1.5rem;
 
+}
+.correo-contacto{
+    text-align: left;
+    padding: 0 2rem;
 }

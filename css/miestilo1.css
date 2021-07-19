@@ -175,11 +175,9 @@ li {
     text-align: center;
     justify-content: center;
     gap: .5rem; }
-  .contenedor-secundario, .contenedor-terciario {
-    padding: 1rem;
+  .contenedor-secundario, .contenedor-terciario, .contenedor-terciario {
+    padding: .1rem;
     text-align: justify; }
-  .contenedor-terciario {
-    padding: 1rem; }
   .btn {
     font-size: 2rem; }
   footer .footer__icono {
@@ -187,7 +185,7 @@ li {
     justify-content: center;
     margin: 2rem 0; }
   footer .footer__texto {
-    padding: 1rem 0 0 1rem; }
+    padding: 1rem; }
   #grilla1 {
     display: block;
     padding: 3rem 8rem;
@@ -399,6 +397,9 @@ h2 {
     .campo-fechas label #label-none {
       display: inline; }
 
+.footer__nav, .footer__icono {
+  justify-content: left; }
+
 .footer__nav {
   list-style: none;
   display: flex;
@@ -420,4 +421,8 @@ h2 {
 
 .footer__icono {
   display: flex;
+  padding: 1rem 1.5rem; }
+
+.correo-contacto {
+  text-align: left;
   padding: 0 2rem; }
