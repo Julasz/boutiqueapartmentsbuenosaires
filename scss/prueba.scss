@@ -247,13 +247,10 @@ li{
         gap: .5rem;
 
     }
-    .contenedor-secundario{
-        padding: 1rem;
+    .contenedor-secundario, .contenedor-terciario{
+        padding: .1rem;
         text-align: justify;
 
-    }
-    .contenedor-terciario{
-        padding: 1rem;
     }
     .btn{
         font-size: 2rem;
@@ -266,7 +263,7 @@ li{
             margin: 2rem 0;
         }
         .footer__texto{
-            padding: 1rem 0 0 1rem;
+            padding: 1rem;
         }
     }
 
