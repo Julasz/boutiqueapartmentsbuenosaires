@@ -641,7 +641,14 @@ h2{
 .correo-contacto{
     text-align: left;
     padding: 0 2rem;
-    text-decoration: none;
+    font-size: 1.8rem;
+
+    a{
     color: $grisOscuro;
-    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    a:hover{
+        font-size: 2rem;
+    }
 }
