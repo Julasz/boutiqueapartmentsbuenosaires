@@ -611,7 +611,7 @@ h2{
     list-style:none;
     display: flex;
     padding: 1rem 1.8rem;
-    
+    margin: 0;
     height: 20%;
 
     a:hover{
@@ -636,19 +636,25 @@ h2{
 .footer__icono{
     display: flex; 
     padding: 1rem 1.5rem;
+    display: inline;
+    justify-content: left;
 
 }
-.correo-contacto{
-    text-align: left;
-    padding: 0 2rem;
+p{
+    text-decoration: none;
     font-size: 1.8rem;
 
-    a{
-    color: $grisOscuro;
-    cursor: pointer;
-    text-decoration: none;
-    }
-    a:hover{
-        font-size: 2rem;
+    .correo-contacto{
+        text-align: left;
+        padding: 0 2rem;
+        color: $grisOscuro;
+
+        a{
+        cursor: pointer;
+        text-decoration: none;
+        }
+        a:hover{
+            font-size: 2rem;
+        }
     }
 }
