@@ -30,6 +30,16 @@ main, footer {
 hr {
   margin: 0; }
 
+.hero {
+  background-image: url(../img/ciudad.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .hero h2 {
+    height: 990px;
+    font-size: 8rem;
+    font-style: italic;
+    color: white; }
+
 h1 {
   color: #ca9e64;
   font-style: italic;
@@ -397,13 +407,18 @@ h2 {
     .campo-fechas label #label-none {
       display: inline; }
 
+#map {
+  width: 100%;
+  height: 580px;
+  box-shadow: 5px 5px 5px #888; }
+
 .footer__nav, .footer__icono {
   justify-content: left; }
 
 .footer__nav {
   list-style: none;
-  display: flex;
   padding: 1rem 1.8rem;
+  display: flex;
   margin: 0;
   height: 20%; }
   .footer__nav a:hover {
@@ -418,23 +433,26 @@ h2 {
   color: #6d6c6c;
   text-decoration: none;
   font-size: 1.2rem;
-  padding-bottom: 2rem; }
+  padding: 0 0 2rem 0; }
 
 .footer__icono {
-  display: flex;
-  padding: 1rem 1.5rem;
   display: inline;
   justify-content: left; }
 
-p {
+.contacto {
   text-decoration: none;
-  font-size: 1.8rem; }
-  p .correo-contacto {
-    text-align: left;
-    padding: 0 2rem;
-    color: #6d6c6c; }
-    p .correo-contacto a {
-      cursor: pointer;
-      text-decoration: none; }
-    p .correo-contacto a:hover {
-      font-size: 2rem; }
+  font-size: 1.8rem;
+  text-align: left;
+  padding: 0 2rem;
+  color: #ca9e64; }
+  .contacto a {
+    color: #ca9e64;
+    cursor: pointer;
+    text-decoration: none; }
+  .contacto a:hover, .contacto a:active {
+    color: #ca9e64;
+    font-weight: bold;
+    font-size: 1.9rem; }
+
+.contenedor-contacto {
+  padding-top: 2rem; }

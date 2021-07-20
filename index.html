@@ -28,7 +28,13 @@
     </nav>
 
     <main>
-        <img class="fotoPrincipal animate__animated animate__fadeIn" src="img/ciudad.jpeg" alt="Panorámica de Buenos Aires">
+        <section class="hero">
+            <div class="contenido-hero">
+                <h2>"Creando momentos inolvidables..."</h2>
+            </div>
+        </section>
+        <!--
+        <img class="fotoPrincipal animate__animated animate__fadeIn" src="img/ciudad.jpeg" alt="Panorámica de Buenos Aires"> -->
         <div class="contenedor-secundario">
             <h1>Descubre</h1>
             <p>Calidez y estilo hogareño. Boutique Aparments refleja la simpleza de lo habitual y lo transforma en una expresión con elegancia y bienestar. Durante su estadía, descubra los barrios de Recoleta y San Telmo, reconocidos lugares que reúnen una diversidad inalcanzable de personas quienes lo recorren diariamente. Camine por los diques, encuentre arquitectura contemporánea y disfrute lo mejor de Buenos Aires.</p>
@@ -37,39 +43,43 @@
             <h1>Ubicación</h1>
             <p>Ubicados en el corazón de Buenos Aires. Descubra alta gastronomía, tiendas de diseño y lo mejor de la moda local. A pocas cuadras del casco histórico y de los puntos turísticos más destacados de la ciudad.</p>
         </div>
-        <img class="fotoMapa" src="img/mapa.jpeg" alt="Mapa de la ciudad">
         
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367198551!2d-58.5033387723421!3d-34.61566245685846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1626750121186!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </main>
 
     <hr>
     <footer>
+        <div class="contenedor-contacto">
+        <p class="contacto"><a href="mailto:reservations@boutiqueapartmentsba.com?">Reservations@BoutiqueApartmentsBA.com</a></p>
+        <p class="contacto"><a href="mailto:info@boutiqueapartmentsba.com?">Info@BoutiqueApartmentsBA.com</a></p>
+
+        <!-- ICONOS -->
+        <section class="footer__icono">
+            <p class="contacto">Encontranos en
+                <a href="https://www.instagram.com/boutiqueapartmentsba/">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#BA55D3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="4" y="4" width="16" height="16" rx="4" />
+                        <circle cx="12" cy="12" r="3" />
+                        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/boutiqueapartmentsba-106393718293174">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6495ED" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+                </a>
+            </p>
+        </section>
+        <!-- FIN ICONOS -->
+        </div>
+
         <ul class="footer__nav">
             <li><a href="https://www.airbnb.com.ar/users/278440549/listings?_set_bev_on_new_domain=1619617254_MzNkNmM4YmVhNzc0">Airbnb</a></li>
             <li><a href="https://hotels.cloudbeds.com/reservation/rMzAk0">CloudBeds</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
         </ul>
-        <p class="correo-contacto"><a href="mailto:reservations@boutiqueapartmentsba.com?">Reservations@BoutiqueApartmentsBA.com</a></p>
-        <p class="correo-contacto"><a href="mailto:info@boutiqueapartmentsba.com?">Info@BoutiqueApartmentsBA.com</a></p>
-
-        <!-- ICONOS -->
-        <section class="footer__icono">
-        
-            <a href="https://www.instagram.com/boutiqueapartmentsba/">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#BA55D3" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <rect x="4" y="4" width="16" height="16" rx="4" />
-                    <circle cx="12" cy="12" r="3" />
-                    <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-                </svg>
-            </a>
-            <a href="https://www.facebook.com/boutiqueapartmentsba-106393718293174">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6495ED" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                </svg>
-            </a>
-        </section>
-        <!-- FIN ICONOS -->
 
         <p class="footer__texto">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-registered" width="12" height="12" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
