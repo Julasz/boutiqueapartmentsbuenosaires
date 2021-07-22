@@ -13,9 +13,6 @@ body {
 main, footer {
   background-color: #fdf9f2; }
 
-.fotoPrincipal, .fotoMapa {
-  width: 100%; }
-
 .contenedor, .contenedor-secundario, .contenedor-terciario {
   width: 120rem;
   margin: 0 auto; }
@@ -33,12 +30,24 @@ hr {
 .hero {
   background-image: url(../img/ciudad.jpeg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  padding: 50rem 0;
+  position: relative; }
+  .hero contenido-hero {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
   .hero h2 {
-    height: 990px;
-    font-size: 8rem;
+    font-size: 5rem;
     font-style: italic;
     color: white; }
+
+.mapa {
+  max-width: 100%;
+  height: auto; }
 
 h1 {
   color: #ca9e64;
@@ -179,6 +188,13 @@ li {
     font-size: 5.5rem; }
   p {
     font-size: 2rem; }
+  .hero {
+    padding: 15rem 0; }
+    .hero h2 {
+      font-size: 2rem; }
+  .mapa {
+    max-width: 100%;
+    height: auto; }
   ul, .iconos, .dropdown-menu {
     font-size: 2rem;
     flex-direction: column;
@@ -186,16 +202,26 @@ li {
     justify-content: center;
     gap: .5rem; }
   .contenedor-secundario, .contenedor-terciario, .contenedor-terciario {
-    padding: .1rem;
-    text-align: justify; }
+    padding: .1rem; }
   .btn {
     font-size: 2rem; }
+  footer .contenedor-contacto {
+    align-items: center;
+    padding: 1rem 0; }
+    footer .contenedor-contacto p {
+      text-align: center;
+      font-size: 1.5rem; }
   footer .footer__icono {
     flex-direction: row;
-    justify-content: center;
-    margin: 2rem 0; }
+    justify-content: center; }
   footer .footer__texto {
     padding: 1rem; }
+  footer .footer__nav {
+    justify-content: center; }
+    footer .footer__nav li {
+      padding: 0; }
+    footer .footer__nav a {
+      font-size: 1.5rem; }
   #grilla1 {
     display: block;
     padding: 3rem 8rem;
@@ -231,6 +257,10 @@ li {
     font-size: 5rem; }
   p {
     font-size: 2rem; }
+  .hero {
+    padding: 20rem 0; }
+    .hero h2 {
+      font-size: 3rem; }
   .navPrincipal a:hover, .btn:hover {
     font-size: 2.1rem; }
   ul, .btn {
@@ -252,11 +282,21 @@ li {
   .formulario .boton {
     font-weight: bold;
     width: 100%; }
+  footer .contenedor-contacto {
+    align-items: center;
+    padding: 1rem 0; }
+    footer .contenedor-contacto p {
+      text-align: center;
+      font-size: 1.8rem; }
   footer .footer__icono, footer .footer__nav {
     flex-direction: row;
     justify-content: center; }
   footer .footer__texto {
-    text-align: center; } }
+    text-align: center; }
+  footer .footer__nav li {
+    padding: 1rem; }
+  footer .footer__nav a {
+    font-size: 1.8rem; } }
 
 @media only screen and (min-width: 768px) {
   .contenedor-secundario, .contenedor-terciario {
@@ -267,6 +307,10 @@ li {
     font-size: 8rem; }
   ul, .btn {
     font-size: 2rem; }
+  .hero {
+    padding: 25rem 0; }
+    .hero h2 {
+      font-size: 4rem; }
   .navPrincipal a:hover, .btn:hover {
     font-size: 2.5rem; }
   .dropdown-menu a:hover {
@@ -285,7 +329,15 @@ li {
     width: 90%; }
     .formulario .boton {
       width: 100%;
-      font-weight: bold; } }
+      font-weight: bold; }
+  footer .contenedor-contacto {
+    align-items: flex-start;
+    padding: 1rem 0; }
+    footer .contenedor-contacto p {
+      text-align: center;
+      font-size: 1.8rem; }
+  footer .footer__nav {
+    padding-top: 3rem; } }
 
 @media only screen and (min-width: 992px) {
   .navPrincipal {
@@ -294,6 +346,10 @@ li {
     padding: 0 10rem;
     margin: 0;
     width: 100%; }
+  .hero {
+    padding: 50rem 0; }
+    .hero h2 {
+      font-size: 6rem; }
   #grilla1 {
     display: grid;
     padding-bottom: 5rem; }
@@ -417,8 +473,9 @@ h2 {
 
 .footer__nav {
   list-style: none;
-  padding: 1rem 1.8rem;
+  padding: 2rem 1.8rem 0 1.8rem;
   display: flex;
+  flex-direction: row;
   margin: 0;
   height: 20%; }
   .footer__nav a:hover {
@@ -455,4 +512,9 @@ h2 {
     font-size: 1.9rem; }
 
 .contenedor-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   padding-top: 2rem; }
+  .contenedor-contacto p {
+    font-size: 3rem; }

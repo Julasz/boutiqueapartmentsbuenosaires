@@ -22,9 +22,6 @@ body{
 main, footer{
     background-color: $fondoPagina;
 }
-.fotoPrincipal, .fotoMapa{
-    width: 100%;
-}
 
 .contenedor{
     width: 120rem;
@@ -47,13 +44,32 @@ hr{
     background-image: url(../img/ciudad.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%;
+    height: auto;
 
+    padding: 50rem 0;
+
+    position: relative;
+
+    contenido-hero{
+        position: absolute;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     h2{
-        height: 990px;
-        font-size: 8rem;
+        
+        font-size: 5rem;
         font-style: italic;
         color: white;
     }
+    
+
+}
+.mapa{
+    max-width: 100%;
+    height: auto;
 }
 
 // TIPOGRAFÍA
@@ -251,6 +267,18 @@ li{
     p{
         font-size: 2rem;
     }
+    .hero{
+        padding: 15rem 0;
+
+        h2{
+            font-size: 2rem;
+        }
+    }
+    .mapa{
+        max-width: 100%;
+        height: auto;
+
+    }
     ul, .iconos, .dropdown-menu {
         font-size: 2rem;
         flex-direction: column;
@@ -262,21 +290,35 @@ li{
     }
     .contenedor-secundario, .contenedor-terciario{
         padding: .1rem;
-        text-align: justify;
-
     }
     .btn{
         font-size: 2rem;
     }
     footer{
+        .contenedor-contacto{
+            align-items: center;
+            padding: 1rem 0;
+            p{
+            text-align: center;
+            font-size: 1.5rem;
+            }
+        }
         .footer__icono{
             flex-direction: row;
             justify-content: center;
-    
-            margin: 2rem 0;
+
         }
         .footer__texto{
             padding: 1rem;
+        }
+        .footer__nav{
+            justify-content: center;
+            li{
+            padding: 0;
+            }
+            a{
+            font-size: 1.5rem;
+            }
         }
     }
 
@@ -341,6 +383,13 @@ li{
     p{
         font-size: 2rem;
     }
+    .hero{
+        padding: 20rem 0;
+
+        h2{
+        font-size: 3rem;
+        }
+    }
     .navPrincipal a:hover, .btn:hover{
         font-size: 2.1rem;
     }
@@ -385,6 +434,14 @@ li{
 
     //footer
     footer{
+        .contenedor-contacto{
+            align-items: center;
+            padding: 1rem 0;
+            p{
+            text-align: center;
+            font-size: 1.8rem;
+            }
+        }
         .footer__icono, .footer__nav{
             flex-direction: row;
             justify-content: center;
@@ -393,6 +450,14 @@ li{
         
         .footer__texto{
             text-align: center;
+        }
+        .footer__nav{
+            li{
+            padding: 1rem;
+            }
+            a{
+            font-size: 1.8rem;
+            }
         }
     }
 }
@@ -410,6 +475,13 @@ li{
     
     ul, .btn{
         font-size: 2rem;
+    }
+    .hero{
+        padding: 25rem 0;
+
+        h2{
+            font-size: 4rem;
+        }
     }
     .navPrincipal a:hover, .btn:hover{
         font-size: 2.5rem;
@@ -444,7 +516,21 @@ li{
         font-weight: bold;
         }
     }
-    
+
+    //footer
+    footer{
+        .contenedor-contacto{
+            align-items: flex-start;
+            padding: 1rem 0;
+            p{
+            text-align: center;
+            font-size: 1.8rem;
+            }
+        }
+        .footer__nav{
+            padding-top: 3rem
+        };
+    }
 }
 // web +992px
 @media only screen and (min-width: 992px){
@@ -457,6 +543,13 @@ li{
         width: 100%;
     }
 
+    .hero{
+        padding: 50rem 0;
+
+        h2{
+            font-size: 6rem;
+        }
+    }
     #grilla1{
         display: grid;
         padding-bottom: 5rem;
@@ -495,6 +588,7 @@ li{
             font-weight: bold;
         }
     }
+    
 }
 
 // FORMULARIO CONCTACT US
@@ -630,8 +724,9 @@ h2{
 }
 .footer__nav{
     list-style:none;
-    padding: 1rem 1.8rem;
+    padding: 2rem 1.8rem 0 1.8rem;
     display: flex;
+    flex-direction: row;
     margin: 0;
     height: 20%;
     a:hover{
@@ -677,5 +772,12 @@ h2{
     }
 }
 .contenedor-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     padding-top: 2rem;
+
+    p{
+        font-size: 3rem;
+    }
 }
