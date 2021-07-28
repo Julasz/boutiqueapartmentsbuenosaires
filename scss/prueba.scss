@@ -19,23 +19,18 @@ body{
 
     position: relative;
 }
-main, footer{
+main{
     background-color: $fondoPagina;
 }
+footer{
+    background: linear-gradient(to bottom, white, $fondoPagina);
+} 
 
 .contenedor{
     width: 120rem;
     margin: 0 auto;
 }
-.contenedor-secundario{
-    @extend .contenedor;
-    width: 100%;
-    padding: 0 10rem;
-}
-.contenedor-terciario{
-    @extend .contenedor-secundario;
-    padding: 0 16rem;
-}
+
 hr{
     margin: 0;
 }
@@ -72,6 +67,15 @@ hr{
     height: auto;
 }
 
+.fondo-servicios{
+    background-image: url(../img/ST10fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+
+}
+
 // TIPOGRAFÍA
 
 @mixin titulo( $tamanioLetra , $espacioRelleno){
@@ -89,15 +93,35 @@ h1{
     font-style: italic;
 }
 p, .lista-servicios{
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: center;
     line-height: 2;
     margin: 0;
     padding: 3rem 6rem;
     letter-spacing: 2px;
+    font-weight: normal;
 }
 h1, p, .footer{
     text-align: center;
+}
+// ERROR 404
+
+#error404{
+
+    .contenedor-404{
+        background-color: $principal;
+
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2, p{
+            text-align: center;
+        }
+        
+    }
 }
 
 // LINKS - NAVEGADORES
@@ -109,17 +133,19 @@ h1, p, .footer{
 .navPrincipal{
     @include navegador( 100% , 2.5rem , 5px );
 
+    padding: 1rem;
     position: sticky;
     z-index: 9999;
     top: 0px;
     background-color: white;
-    opacity: .87;
+    opacity: .90;
 
     ul{
         display: flex;
         height: auto;
         justify-content: space-evenly;
         align-items: center;
+        margin: 0;
     }
     a:hover{
         font-size: 2.7rem;
@@ -183,8 +209,15 @@ li{
         margin: 16px;
         background-color: white;
     
-        width: 20%;
+        width: 23rem;
+        height: 50rem;
     }
+
+    .card__habitaciones:hover{
+        width: 24rem;
+        height: 51rem;
+    }
+    
     .card__habitaciones .card__imagen{
         padding: 3rem 1rem 0 1rem;
         display: flex;
@@ -193,12 +226,16 @@ li{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
-    
+    .card__contenido{
+        padding: 0;
+    }
     .card__habitaciones{
         padding: 16px 8px;
         text-align: center;
     }
-    
+    .card__titulo{
+        padding: 2rem 0;
+    }
     .card__habitaciones .card__titulo{
         padding-bottom: 8px;
     }
@@ -209,15 +246,23 @@ li{
 }
 
 // CARD SERVICIOS CON GRID
+.aclaraciones{
+    p{  
+        text-align: start;
+        font-size: 1.5rem;
+        font-style: italic;
+        padding: 1rem 0 1rem 5rem ;
+    }
+}
 #grilla1{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
 
     gap: 4rem;
-    padding-bottom: 5rem;
-    width: 100%;
+
     .servicios{
+        width: 20rem;
+        height: 19rem;
         background-color: white;
         display: grid;
         
@@ -226,6 +271,10 @@ li{
         padding: 1rem;
     
         border-radius: 5px;
+    }
+    .servicios:hover{
+        width: 23rem;
+        height: 20rem;
     }
     
     .serviciosIcono{
@@ -237,7 +286,7 @@ li{
         width: 100%;
     }
     .servicios-nombre{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         padding: 1rem 2rem;
         margin: 1rem 0;
     
@@ -259,12 +308,15 @@ li{
         position: static;
     }
     h1, .sanTelmo__titulo{
+        padding: 8rem 5rem 3rem 5rem;
         font-size: 5.4rem;
     }
     .alvear{
+        padding: 5rem;
         font-size: 5.5rem;
     }
     p{
+        padding: 3rem;
         font-size: 2rem;
     }
     .hero{
@@ -288,9 +340,15 @@ li{
         gap: .5rem;
 
     }
-    .contenedor-secundario, .contenedor-terciario{
-        padding: .1rem;
+    .contenedor-secundario{
+        p{
+            padding-bottom: 2rem;
+        }
     }
+    .contenedor-secundario, .contenedor-terciario{
+        padding: 3rem 0;
+    }
+    
     .btn{
         font-size: 2rem;
     }
@@ -314,7 +372,7 @@ li{
         .footer__nav{
             justify-content: center;
             li{
-            padding: 0;
+            padding: 0 1rem;
             }
             a{
             font-size: 1.5rem;
@@ -326,21 +384,42 @@ li{
     // card habitaciones
 
     #grilla1{
-        display: block;
-        padding: 3rem 8rem;
-        margin: 0;
+        grid-template-columns: 50% 50%;
+        justify-content: space-evenly;
+        padding: 0 1rem 0 1.5rem;
+        width: 80%;
+        margin-left: 4rem;
+
         .servicios{
             margin-bottom: 3rem;
+            width: 19rem;
+            height: 19rem;
+        }
+        .servicios:hover{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    .aclaraciones{
+        p{
+            padding: 1rem 2rem;
         }
     }
     .card{
-        padding: 0 0 0 2rem;
         display: block;
         justify-content: center;
 
         .card__habitaciones{
-            width: 90%;
+            margin: 4rem 8rem;
+            width: 30rem;
+            height: 45rem;
         }
+    
+        .card__habitaciones:hover{
+            width: 31rem;
+            height: 46rem;
+        }
+        
         .card__contenido{
             width: 100%;
         }
@@ -348,7 +427,6 @@ li{
             font-weight: bolder;
         }
     }
-
     // formulario
     .formulario{
         width: 90%;
@@ -370,9 +448,14 @@ li{
     }
     .contenedor-secundario{
         padding: 0 4rem;
+        
+        p{
+            padding-bottom: 4rem;
+        }
+        
     }
     .contenedor-terciario{
-        padding: 0 1rem;
+        padding: 0 1rem 10rem 1rem;
     }
     h1, .sanTelmo__titulo{
         font-size: 6rem;
@@ -381,6 +464,7 @@ li{
         font-size: 5rem;
     }
     p{
+        padding: 0;
         font-size: 2rem;
     }
     .hero{
@@ -401,13 +485,30 @@ li{
     //card habitaciones
 
     #grilla1{
-        display: block;
-        padding: 3rem 8rem;
+        grid-template-columns: 50% 50%;
+        gap: 2rem;
+        padding: 0 1rem 0 1.5rem;
+        width: 80%;
+        margin-left: 4rem;
 
         .servicios{
             margin-bottom: 3rem;
+            width: 19rem;
+            height: 19rem;
         }
-
+        .servicios:hover{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    .aclaraciones{
+        padding: 2rem 0;
+        p{
+            padding: 3rem 3rem 0 3rem;
+        }
+    }
+    .lista-servicios{
+        padding: 0;
     }
     .card{
         display: block;
@@ -415,7 +516,16 @@ li{
 
         .card__habitaciones{
             width: 90%;
-            margin: 3rem;
+            margin: 4rem 13rem;
+            width: 33rem;
+            height: 40rem;
+            
+        }
+
+        
+        .card__habitaciones:hover{
+            width: 34rem;
+            height: 41rem;
         }
         .card__contenido{
             width: 100%;
@@ -425,6 +535,8 @@ li{
 
     //formulario
     .formulario{
+        width: 80%;
+        padding: 0;
         .boton{
             font-weight: bold;
             width: 100%;
@@ -465,9 +577,13 @@ li{
 @media only screen and (min-width: 768px){
     .contenedor-secundario{
         padding: 0 3rem;
+        p{
+            padding-bottom: 6rem;
+        }
     }
     .contenedor-terciario{
         width: 100%;
+        padding-bottom: 10rem;
     }
     h1, .sanTelmo__titulo, .alvear{
         font-size:8rem;
@@ -493,12 +609,18 @@ li{
     //cards
 
     #grilla1{
-        display: flex;
+        grid-template-columns: 1fr 1fr 1fr;
         padding: 2rem 0;
+        gap: 4rem;
+        justify-content: space-evenly;
+        margin-left: 7rem;
 
         .servicios{
             padding: 2rem 0;
-            width: 50%;
+        }
+        .servicios:hover{
+            width: 21rem;
+            height: 20rem;
         }
     }
     .card{
@@ -506,7 +628,19 @@ li{
         margin: auto;
         padding: 2rem auto;
 
+        .card__habitaciones{
+            width: 90%;
+            margin-left: 11rem;
+            width: 33rem;
+            height: 40rem;
+            
+        }
+        .card__habitaciones:hover{
+            width: 34rem;
+            height: 41rem;
+        }
     }
+    
     //formulario
     .formulario{
         width: 90%;
@@ -527,12 +661,9 @@ li{
             font-size: 1.8rem;
             }
         }
-        .footer__nav{
-            padding-top: 3rem
-        };
     }
 }
-// web +992px
+// web +992px +1200px
 @media only screen and (min-width: 992px){
     .navPrincipal{
         position: sticky;
@@ -541,6 +672,13 @@ li{
         padding: 0 10rem;
         margin: 0;
         width: 100%;
+    }
+    .contenedor-terciario{
+        padding: 2rem 5rem 10rem 5rem;
+    }
+    .aclaraciones{
+        text-align: start;
+        padding: 2rem;
     }
 
     .hero{
@@ -551,8 +689,12 @@ li{
         }
     }
     #grilla1{
-        display: grid;
+
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4rem;
+        align-items: center;
         padding-bottom: 5rem;
+        width: 80%;
 
         .servicios{
             display: grid;
@@ -560,26 +702,124 @@ li{
             margin: 0;
             width: 100%;
         }
+
+        .servicios:hover{
+            width: 21rem;
+            height: 20rem;
+        }
     }
-    
+    .aclaraciones{
+        p{
+            padding: 0;
+            text-align: center;
+        }
+    }
 
     //card habitaciones
     .card{
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        
+        .card__habitaciones{
+            align-items: center;
+            width: 33rem;
+            height: 40rem;
+            
+        }
+        .card__habitaciones:hover{
+            width: 34rem;
+            height: 41rem;
+        }
+
+        .card__contenido{
+        margin: 0;
+        }
+    }
+    //formulario
+    .formulario{
+        width: 65rem;
+        .boton{
+            width: 15%;
+            font-weight: bold;
+        }
+    }
+    
+}
+@media only screen and (min-width: 1200px){
+    .contenedor-secundario{
+        padding: 0 13rem;
+    
+        p{
+            padding-bottom: 5rem;
+        }
+    }
+    .contenedor-terciario{
+        padding: 0 13rem 10rem 13rem;
+    }
+    .aclaraciones{
+        text-align: start;
+        padding: 2rem;
+    }
+
+    .hero{
+        padding: 50rem 0;
+
+        h2{
+            font-size: 6rem;
+        }
+    }
+    #grilla1{
+
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4rem;
+        align-items: center;
+        padding-bottom: 5rem;
+        margin-left: 12rem;
+
+        .servicios{
+            display: grid;
+            padding: 1rem;
+            margin: 0;
+            width: 22rem;
+            height: 21rem;
+        }
+
+        .servicios:hover{
+            width: 23rem;
+            height: 22rem;
+        }
+    }
+    .aclaraciones{
+        p{
+            text-align: start;
+            padding: 1rem;
+        }
+    }
+
+    //card habitaciones
+    .card{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         width: 100%;
         margin: 0;
 
         .card__habitaciones{
-            margin: 5rem 2rem;
+            width: 23rem;
+            height: 48rem;
+            margin: 0 3rem;
+            
+        }
+        .card__habitaciones:hover{
+            width: 24rem;
+            height: 49rem;
         }
         .card__contenido{
         margin: 0;
         }
     }
-    .cardContenedor{
-        display: flex;
-    }
-
     //formulario
     .formulario{
         width: 65rem;
@@ -597,18 +837,11 @@ h2{
     color: #8B4513;
     text-align: center;
     font-size: 3rem;
-    padding: 2rem;
+    padding: 5rem;
     font-weight: bold;
-} 
-.sombra{
-    -webkit-box-shadow: 1px 0px 19px -2px rgba(0,0,0,0.9);
-    -moz-box-shadow: 1px 0px 19px -2px rgba(0,0,0,0.9);
-    box-shadow: 1px 0px 19px -2px rgba(0,0,0,0.9);
 }
-.sombra-secundaria{
-    -webkit-box-shadow: -1px 0px 12px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 0px 12px -1px rgba(0,0,0,0.75);
-    box-shadow: -1px 0px 12px -1px rgba(0,0,0,0.75);
+.sombra{
+    box-shadow: 0px 0px 10px 1px #999
 }
 .formulario{
     margin: 0 auto;
@@ -688,7 +921,7 @@ h2{
     }
     .input-text:focus{
         border-color: $principal;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -714,17 +947,18 @@ h2{
 #map{
     width: 100%;
     height: 580px;
-    box-shadow: 5px 5px 5px #888;
+    margin-top: 10rem;
+    box-shadow: 2px 2px 15px 1px #888;
     
 }
 // FOOTER
+
 .footer__nav, .footer__icono{
     justify-content: left;
 
 }
 .footer__nav{
     list-style:none;
-    padding: 2rem 1.8rem 0 1.8rem;
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -765,10 +999,14 @@ h2{
     cursor: pointer;
     text-decoration: none;
     }
-    a:hover, a:active{
+    a:hover{
         color: $principal;
         font-weight: bold;
         font-size: 1.9rem;
+    }
+    svg:hover{
+        width: 35px;
+        height: 35px;
     }
 }
 .contenedor-contacto{

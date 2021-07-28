@@ -10,7 +10,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/miestilo1.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap" rel="stylesheet">
-    <title>Boutique Apartments Buenos Aires | Alojamientos rentables</title>
+    <title>Not Found | Boutique Apartments BA</title>
     <link rel="icon" type="image/png" href="img/LOGOBA.png">
 </head>
 
@@ -29,29 +29,24 @@
         </ul>
     </nav>
 
-    <main>
-        <section class="hero">
-            <div class="contenido-hero">
-                <div data-aos="fade-down"
-                    data-aos-easing="linear"
-                    data-aos-duration="1500">
-                    <h2>"Creando momentos inolvidables..."</h2>
-                </div>
-            </div>
-        </section>
-       
-        <div class="contenedor-secundario">
-            <h1>Descubre</h1>
-            <p>Calidez y estilo hogareño. Boutique Aparments refleja la simpleza de lo habitual y lo transforma en una expresión con elegancia y bienestar. Durante su estadía, descubra los barrios de Recoleta y San Telmo, reconocidos lugares que reúnen una diversidad inalcanzable de personas quienes lo recorren diariamente. Camine por los diques, encuentre arquitectura contemporánea y disfrute lo mejor de Buenos Aires.</p>
-            <p>Arte y diseño se combinan para brindarte una experiencia perfecta. Cada uno de nuestros espacios ha sido especialmente diseñado para que puedas sentirte como en tu hogar, el mix perfecto entre negocios y descanso. Texturas y una cuidada selección de ArteCo para agasajarte a través de tu estancia.</p>
+    <main id="error404">
+        <div class="contenedor-404 contenedor-terciario">
+            <h2>¡Ops!...¡Página no disponible!</h2>
+            <p>¡No te preocupes! Estamos trabajando para solucionar los problemas.
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tool" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5" />
+                </svg>
+            </p>
         
-            <h1>Ubicación</h1>
-            <p>Ubicados en el corazón de Buenos Aires. Descubra alta gastronomía, tiendas de diseño y lo mejor de la moda local. A pocas cuadras del casco histórico y de los puntos turísticos más destacados de la ciudad.</p>
+            <p class="boton-volver"><a href="index.html"> Volver al inicio</a></p>
+
         </div>
-        <br>
-        <br>
-        <br>
-        <img class="mapa" src="img/Mapa.jpeg" alt="Mapa con los puntos de Boutique Aparments BA">
 
     </main>
 
