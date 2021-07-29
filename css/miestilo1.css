@@ -74,10 +74,10 @@ p, .lista-servicios {
 h1, p, .footer {
   text-align: center; }
 
-#error404 .contenedor-404 {
+#error404 {
   background-color: #ca9e64;
   width: 100%;
-  max-width: 400px;
+  height: 50rem;
   display: flex;
   justify-content: center;
   align-items: center; }

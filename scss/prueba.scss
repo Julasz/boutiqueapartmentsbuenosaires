@@ -108,19 +108,22 @@ h1, p, .footer{
 
 #error404{
 
-    .contenedor-404{
-        background-color: $principal;
+    background-color: $principal;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        width: 100%;
-        max-width: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .contenedor-404{
+        
+
+        
 
         h2, p{
             text-align: center;
         }
-        
+
     }
 }
 
