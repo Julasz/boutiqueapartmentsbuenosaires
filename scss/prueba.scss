@@ -401,6 +401,13 @@ li{
             font-size: 1.5rem;
             }
         }
+        .metodos-de-pago{
+            display: flex;
+            justify-content: center;
+            img{
+               padding: 0 2rem;
+            }
+        }
     }
 
 
@@ -409,18 +416,17 @@ li{
     #grilla1{
         grid-template-columns: 50% 50%;
         justify-content: space-evenly;
-        padding: 0 1rem 0 1.5rem;
-        width: 80%;
-        margin-left: 4rem;
+        padding: 0 4rem;
+        width: 100%;
 
         .servicios{
             margin-bottom: 3rem;
-            width: 19rem;
-            height: 19rem;
+            width: 17rem;
+            height: 18rem;
         }
         .servicios:hover{
-            width: 20rem;
-            height: 20rem;
+            width: 18rem;
+            height: 19rem;
         }
     }
     .aclaraciones{
@@ -433,14 +439,14 @@ li{
         justify-content: center;
 
         .card__habitaciones{
-            margin: 4rem 3rem;
-            width: 40rem;
-            height: 40rem;
+            margin: 4rem 2rem 4rem 4rem;
+            width: 30rem;
+            height: 45rem;
         }
     
         .card__habitaciones:hover{
-            width: 41rem;
-            height: 41rem;
+            width: 31rem;
+            height: 46rem;
         }
         
         .card__contenido{
