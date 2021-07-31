@@ -317,6 +317,7 @@ li{
 // xs celulares -600px
 @media only screen and (max-width: 600px){
     //principal
+    
     #error404{
         width: 100%;
         height: 60rem;
@@ -432,14 +433,14 @@ li{
         justify-content: center;
 
         .card__habitaciones{
-            margin: 4rem 8rem;
-            width: 30rem;
-            height: 45rem;
+            margin: 4rem 3rem;
+            width: 40rem;
+            height: 40rem;
         }
     
         .card__habitaciones:hover{
-            width: 31rem;
-            height: 46rem;
+            width: 41rem;
+            height: 41rem;
         }
         
         .card__contenido{
@@ -464,7 +465,7 @@ li{
 }
 // s tablet +601px
 @media only screen and (min-width: 601px){
-
+    
     .navPrincipal{
         position: static;
     }
@@ -509,8 +510,7 @@ li{
     #grilla1{
         grid-template-columns: 50% 50%;
         gap: 2rem;
-        padding: 0 1rem 0 1.5rem;
-        width: 80%;
+        width: 100%;
         margin-left: 4rem;
 
         .servicios{
@@ -631,11 +631,10 @@ li{
     //cards
 
     #grilla1{
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 2rem 0;
-        gap: 4rem;
-        justify-content: space-evenly;
-        margin-left: 7rem;
+        grid-template-columns: repeat(3, 1fr);
+        
+        width: 100%;
+        margin-left: 2rem;
 
         .servicios{
             padding: 2rem 0;
@@ -713,21 +712,20 @@ li{
     #grilla1{
 
         grid-template-columns: repeat(5, 1fr);
-        gap: 4rem;
-        align-items: center;
         padding-bottom: 5rem;
-        width: 80%;
+        margin-left: 0;
 
         .servicios{
             display: grid;
             padding: 1rem;
             margin: 0;
-            width: 100%;
+            width: 15rem;
+            height: 20rem;
         }
 
         .servicios:hover{
-            width: 21rem;
-            height: 20rem;
+            width: 16rem;
+            height: 21rem;
         }
     }
     .aclaraciones{
@@ -771,6 +769,7 @@ li{
     
 }
 @media only screen and (min-width: 1200px){
+    
     .contenedor-secundario{
         padding: 0 13rem;
     
@@ -796,10 +795,8 @@ li{
     #grilla1{
 
         grid-template-columns: repeat(5, 1fr);
-        gap: 4rem;
-        align-items: center;
         padding-bottom: 5rem;
-        margin-left: 12rem;
+        gap: 2.5rem;
 
         .servicios{
             display: grid;
@@ -1000,8 +997,8 @@ h2{
 .footer__texto{
     color: $grisOscuro;
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0 0 2rem 0;
+    font-size: 1.5rem;
+    padding: 0;
 }
 
 .footer__icono{
@@ -1039,5 +1036,13 @@ h2{
 
     p{
         font-size: 3rem;
+    }
+}
+
+.metodos-de-pago{
+    display: flex;
+    justify-content: center;
+    img{
+       padding: 0 5rem;
     }
 }

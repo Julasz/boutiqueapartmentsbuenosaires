@@ -222,6 +222,12 @@ li {
     padding: 0 10rem 0 10rem; }
 
 @media only screen and (max-width: 600px) {
+  #error404 {
+    width: 100%;
+    height: 60rem; }
+    #error404 .contenedor-404 {
+      width: 60rem;
+      height: 45rem; }
   .navPrincipal {
     position: static; }
   h1, .sanTelmo__titulo {
@@ -288,12 +294,12 @@ li {
     display: block;
     justify-content: center; }
     .card .card__habitaciones {
-      margin: 4rem 8rem;
-      width: 30rem;
-      height: 45rem; }
+      margin: 4rem 3rem;
+      width: 40rem;
+      height: 40rem; }
     .card .card__habitaciones:hover {
-      width: 31rem;
-      height: 46rem; }
+      width: 41rem;
+      height: 41rem; }
     .card .card__contenido {
       width: 100%; }
     .card .input-text {
@@ -332,8 +338,7 @@ li {
   #grilla1 {
     grid-template-columns: 50% 50%;
     gap: 2rem;
-    padding: 0 1rem 0 1.5rem;
-    width: 80%;
+    width: 100%;
     margin-left: 4rem; }
     #grilla1 .servicios {
       margin-bottom: 3rem;
@@ -404,11 +409,9 @@ li {
   .dropdown-menu a:hover {
     font-size: 2.1rem; }
   #grilla1 {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem 0;
-    gap: 4rem;
-    justify-content: space-evenly;
-    margin-left: 7rem; }
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-left: 2rem; }
     #grilla1 .servicios {
       padding: 2rem 0; }
     #grilla1 .servicios:hover {
@@ -456,18 +459,17 @@ li {
       font-size: 6rem; }
   #grilla1 {
     grid-template-columns: repeat(5, 1fr);
-    gap: 4rem;
-    align-items: center;
     padding-bottom: 5rem;
-    width: 80%; }
+    margin-left: 0; }
     #grilla1 .servicios {
       display: grid;
       padding: 1rem;
       margin: 0;
-      width: 100%; }
-    #grilla1 .servicios:hover {
-      width: 21rem;
+      width: 15rem;
       height: 20rem; }
+    #grilla1 .servicios:hover {
+      width: 16rem;
+      height: 21rem; }
   .aclaraciones p {
     padding: 0;
     text-align: center; }
@@ -508,10 +510,8 @@ li {
       font-size: 6rem; }
   #grilla1 {
     grid-template-columns: repeat(5, 1fr);
-    gap: 4rem;
-    align-items: center;
     padding-bottom: 5rem;
-    margin-left: 12rem; }
+    gap: 2.5rem; }
     #grilla1 .servicios {
       display: grid;
       padding: 1rem;
@@ -652,8 +652,8 @@ h2 {
 .footer__texto {
   color: #6d6c6c;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0 0 2rem 0; }
+  font-size: 1.5rem;
+  padding: 0; }
 
 .footer__icono {
   display: inline;
@@ -684,3 +684,9 @@ h2 {
   padding-top: 2rem; }
   .contenedor-contacto p {
     font-size: 3rem; }
+
+.metodos-de-pago {
+  display: flex;
+  justify-content: center; }
+  .metodos-de-pago img {
+    padding: 0 5rem; }
